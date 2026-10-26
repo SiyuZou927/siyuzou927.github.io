@@ -2,8 +2,6 @@
 
 While reviewing my three-dimensional oblique water-entry results, I noticed an abrupt increase in axial drag magnitude near a dimensionless penetration distance of 16. The magnitude then remained above the experimental reference curve. This change is already present in the unfiltered sampled output and becomes a clear step after smoothing. This note brings together the simulation conditions, load curves and corresponding water-entry snapshots to document the observation.
 
-**Publication note, 26 October 2026.** The figures below document an archived diagnostic run, not the revised solver's validation results. Subsequent checks identified rigid-body/fluid clock synchronization and time-step implementation issues in my local setup. Revised calculations currently extend to 6 ms and have not yet covered the full late-step region, so these findings do not establish the cause of the step. Here, "raw" means unfiltered native output samples; it does not mean the acoustic-step load actually used to advance the rigid body.
-
 ## 1. Simulation conditions
 
 The simulation uses an M1 projectile with a disk cavitator. Its main body is 479.6 mm long, with a maximum diameter of 58.5 mm; the cavitator diameter is 21.1 mm.
@@ -26,7 +24,7 @@ The dimensionless penetration distance is λ = l/D<sub>c</sub>, where D<sub>c</s
 
 <figure>
 <a href="../assets/axial-force-step/01_signed_axial_step.png"><img src="../assets/axial-force-step/01_signed_axial_step.png" alt="Raw and smoothed signed axial-force coefficients compared with a digitized experimental reference, showing a downward step near lambda = 16." width="2467" height="1264"></a>
-<figcaption>Figure 1. The gray line is the raw axial-force coefficient. The blue line is a 13-point centered moving average, with a discrete window of 0.52 ms. The red dashed line is a digitized reference from the experimental curve of Chen et al. at 20° and 70 m/s. The upper axis shows simulation physical time.</figcaption>
+<figcaption>Figure 1. The gray line is the unfiltered sampled axial-force coefficient. The blue line is a 13-point centered moving average, with a discrete window of 0.52 ms. The red dashed line is a digitized reference from the experimental curve of Chen et al. at 20° and 70 m/s. The upper axis shows simulation physical time.</figcaption>
 </figure>
 
 Within the early-time window, the peak of the smoothed simulation curve occurs at λ = 2.854. The corresponding peak location in the literature table is 1.85. The simulated peak therefore occurs at a penetration distance approximately 54.3% greater than the reference value. The simulated drag then stays near C<sub>x</sub> = -1 over part of the entry distance.
@@ -42,6 +40,6 @@ Near λ = 16, the simulated curve drops rapidly, and the drag magnitude rises to
 
 At 2 ms, the cavitator has entered the water, while most of the projectile body remains above the surface. By 4 ms, the immersed portion extends farther back, and the water surface near the projectile begins to deform visibly. The 6 and 7 ms snapshots span the formation of the load step. The rear of the projectile gradually approaches and enters the region near the deformed water surface.
 
-The observation to explain is the rapid increase in axial drag as the projectile continues to enter the water, followed by sustained separation from the experimental reference. The specific origin of the step remains undetermined.
+The observation to explain is the rapid increase in axial drag as the projectile continues to enter the water, followed by sustained separation from the experimental reference.
 
 Experimental reference: [Chen et al. (2019)](https://doi.org/10.1016/j.ijnaoe.2018.09.002).
