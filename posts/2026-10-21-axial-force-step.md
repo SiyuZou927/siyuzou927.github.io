@@ -42,4 +42,8 @@ At 2 ms, the cavitator has entered the water, while most of the projectile body 
 
 The observation to explain is the rapid increase in axial drag as the projectile continues to enter the water, followed by sustained separation from the experimental reference.
 
+## Source code
+
+[Organized 3D code](https://github.com/SiyuZou927/SPHinXsys-Siyu-Zou/tree/b657f4870c1617c3e1e4cffa56b307812ccd9e36/tests/3d_examples/test_3d_zsy_oblique_water_entry_exit) (commit `b657f48`). Main simulation file: [test_3d_water_entry_exit.cpp](https://github.com/SiyuZou927/SPHinXsys-Siyu-Zou/blob/b657f4870c1617c3e1e4cffa56b307812ccd9e36/tests/3d_examples/test_3d_zsy_oblique_water_entry_exit/test_3d_water_entry_exit.cpp).
+
 Experimental reference: [Chen et al. (2019)](https://doi.org/10.1016/j.ijnaoe.2018.09.002).
